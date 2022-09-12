@@ -6,26 +6,31 @@ rimraf.sync("dist")
 
 const option = {
     bundle: true,
-    plugins: [dtsPlugin()],
     color: true,
     logLevel: "info",
     sourcemap: true,
     entryPoints: ["./src/index.ts"],
+    minify: true,
 }
 
-esbuild
-    .build({
-        format: "esm",
-        outdir: "dist",
-        splitting: true,
-        ...option
-    })
-    .catch(() => process.exit(1))
+async function run() {
+    await esbuild
+        .build({
+            format: "esm",
+            outdir: "dist",
+            splitting: true,
+            plugins: [dtsPlugin()],
+            ...option
+        })
+        .catch(() => process.exit(1))
 
-esbuild
-    .build({
-        format: "cjs",
-        outfile: "./dist/cjs.js",
-        ...option
-    })
-    .catch(() => process.exit(1))
+    await esbuild
+        .build({
+            format: "cjs",
+            outfile: "./dist/cjs.js",
+            ...option
+        })
+        .catch(() => process.exit(1))
+}
+
+run()
