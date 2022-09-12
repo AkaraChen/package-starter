@@ -2,12 +2,12 @@
   "name": "package-starter",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/esm.js",
   "scripts": {
     "prepare": "husky install",
     "build": "npm run build:esm && npm run build:cjs",
-    "build:esm": "esbuild --bundle src/index.ts --format=esm --outfile=dist/esm.js",
-    "build:cjs": "esbuild --bundle src/index.ts --format=cjs --outfile=dist/cjs.js",
+    "build:esm": "esbuild --bundle src/index.ts --format=esm --emitDeclarationOnly --outfile=dist/esm.js",
+    "build:cjs": "esbuild --bundle src/index.ts --format=cjs --emitDeclarationOnly --outfile=dist/cjs.js",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix -c .eslintrc.js",
     "test": "vitest run"
   },
@@ -26,5 +26,6 @@
   "exports": {
     "import": "./dist/esm.js",
     "require": "./dist/cjs.js"
-  }
+  },
+  "types": "./index.d.ts"
 }
