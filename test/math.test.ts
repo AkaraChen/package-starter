@@ -1,5 +1,5 @@
 import { increment } from "../src/math";
-import { describe, expect, test } from "@jest/globals";
+import { test, expect, describe } from "vitest";
 
 describe("math module", () => {
   test("0 increment equal 1", () => {
