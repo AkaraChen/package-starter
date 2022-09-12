@@ -5,9 +5,7 @@
   "main": "./dist/esm.js",
   "scripts": {
     "prepare": "husky install",
-    "build": "npm run build:esm && npm run build:cjs",
-    "build:esm": "esbuild --bundle src/index.ts --format=esm --emitDeclarationOnly --outfile=dist/esm.js",
-    "build:cjs": "esbuild --bundle src/index.ts --format=cjs --emitDeclarationOnly --outfile=dist/cjs.js",
+    "build": "node build",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix -c .eslintrc.js",
     "test": "vitest run"
   },
@@ -18,14 +16,16 @@
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",
     "esbuild": "^0.15.7",
+    "esbuild-plugin-d.ts": "^1.1.0",
     "eslint": "^8.23.0",
     "husky": "^8.0.1",
+    "rimraf": "^3.0.2",
     "typescript": "^4.8.3",
     "vitest": "^0.23.2"
   },
   "exports": {
-    "import": "./dist/esm.js",
+    "import": "./dist/index.js",
     "require": "./dist/cjs.js"
   },
-  "types": "./index.d.ts"
+  "types": "./dist/index.d.ts"
 }
