@@ -1,3 +1,5 @@
+// @vitest-environment node
+
 import { increment } from "../src/math";
 import { test, expect, describe } from "vitest";
 
