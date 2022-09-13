@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/index.ts", "../src/math.ts"],
+  "sourcesContent": ["import { increment } from \"./math\";\r\n\r\nexport const greet = (name = \"World\") => console.log(`Hello, ${name}!`);\r\n\r\nexport default increment(0);\r\n", "export const increment = (value: number) => ++value;\r\n"],
+  "mappings": "yaAAA,IAAAA,EAAA,GAAAC,EAAAD,EAAA,aAAAE,EAAA,UAAAC,IAAA,eAAAC,EAAAJ,GCAO,IAAMK,EAAaC,GAAkB,EAAEA,EDEvC,IAAMC,EAAQ,CAACC,EAAO,UAAY,QAAQ,IAAI,UAAUA,IAAO,EAE/DC,EAAQC,EAAU,CAAC",
+  "names": ["src_exports", "__export", "src_default", "greet", "__toCommonJS", "increment", "value", "greet", "name", "src_default", "increment"]
+}
