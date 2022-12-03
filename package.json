@@ -16,7 +16,7 @@
     "devDependencies": {
         "esbuild": "0.15.16",
         "esbuild-plugin-d.ts": "1.1.0",
-        "eslint": "8.28.0",
+        "eslint": "8.29.0",
         "eslint-config-akrc": "^0.0.8",
         "husky": "8.0.2",
         "rimraf": "3.0.2",
