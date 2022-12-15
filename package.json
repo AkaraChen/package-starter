@@ -4,11 +4,11 @@
     "description": "",
     "main": "./dist/esm.js",
     "scripts": {
-        "prepare": "husky install",
         "build": "node build.cjs",
         "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix .",
         "test": "vitest run",
-        "prepublish": "npm run build"
+        "prepublish": "npm run build",
+        "taze": "taze major -w"
     },
     "keywords": [],
     "author": "",
@@ -18,8 +18,8 @@
         "esbuild-plugin-d.ts": "1.1.0",
         "eslint": "8.29.0",
         "eslint-config-akrc": "^0.0.9",
-        "husky": "8.0.2",
         "rimraf": "3.0.2",
+        "taze": "^0.8.4",
         "typescript": "4.9.4",
         "vitest": "0.25.8"
     },
