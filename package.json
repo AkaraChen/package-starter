@@ -14,7 +14,7 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "esbuild": "0.17.10",
+        "esbuild": "0.17.11",
         "esbuild-plugin-d.ts": "1.1.0",
         "eslint": "8.35.0",
         "eslint-config-akrc": "^1.0.0",
