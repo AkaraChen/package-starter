@@ -16,7 +16,7 @@
     "devDependencies": {
         "esbuild": "0.17.11",
         "esbuild-plugin-d.ts": "1.1.0",
-        "eslint": "8.35.0",
+        "eslint": "8.36.0",
         "eslint-config-akrc": "^1.0.0",
         "rimraf": "4.3.1",
         "taze": "^0.9.0",
