@@ -129,3 +129,6 @@ dist
 # MacOS
 
 .DS_Store
+
+# doc
+docs

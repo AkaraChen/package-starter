@@ -1,34 +1,38 @@
 {
-    "name": "package-starter",
-    "version": "0.0.0",
-    "description": "",
-    "main": "./dist/esm.js",
-    "scripts": {
-        "build": "node build.cjs",
-        "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix .",
-        "test": "vitest run",
-        "prepublish": "npm run build",
-        "taze": "taze major -w"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-        "esbuild": "0.17.12",
-        "esbuild-plugin-d.ts": "1.1.0",
-        "eslint": "8.36.0",
-        "eslint-config-akrc": "^1.0.0",
-        "rimraf": "4.4.0",
-        "taze": "^0.9.0",
-        "typescript": "5.0.2",
-        "vitest": "0.29.3"
-    },
-    "exports": {
-        "import": "./dist/index.js",
-        "require": "./dist/cjs.js"
-    },
-    "types": "./dist/index.d.ts",
-    "files": [
-        "./dist"
-    ]
+	"name": "package-starter",
+	"version": "0.0.0",
+	"description": "",
+	"scripts": {
+		"build": "tsup",
+		"test": "vitest run",
+		"prepublish": "npm run build",
+		"taze": "taze major -w",
+		"check": "biome check --write --unsafe .",
+		"publint": "publint",
+		"doc": "typedoc src/index.ts --plugin typedoc-material-theme  --themeColor '#1C6EF3'"
+	},
+	"keywords": [],
+	"author": "AkaraChen",
+	"license": "MIT",
+	"devDependencies": {
+		"@biomejs/biome": "^1.8.3",
+		"publint": "^0.2.9",
+		"taze": "^0.16.1",
+		"tslib": "^2.6.3",
+		"tsup": "^8.1.2",
+		"typedoc": "^0.26.4",
+		"typedoc-material-theme": "^1.1.0",
+		"typescript": "5.5.3",
+		"vitest": "2.0.3"
+	},
+	"files": ["./dist"],
+	"packageManager": "pnpm@9.5.0",
+	"type": "commonjs",
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.mts",
+	"exports": {
+		"types": "./dist/index.d.mts",
+		"import": "./dist/index.mjs"
+	}
 }

@@ -22,7 +22,7 @@ pnpm run build
 ### lint
 
 ```shell
-pnpm run lint
+pnpm run check
 ```
 
 ### test
